@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# Create folderes for dev work
+mkdir -pv $HOME/Dev
+mkdir -pv $HOME/Training
+mkdir -pv $HOME/Testing
+
+
 # Creates /Users/$username/Screenshots and changes the default folder for screenshots
-mkdir -p $HOME/Screenshots/
+mkdir -pv $HOME/Screenshots/
 defaults write com.apple.screencapture location /Users/$username/screenshots/ && killall SystemUIServer
 
 # This script installs Homebrew for OSX as well as Casks for Brew
@@ -15,6 +21,9 @@ then
   echo "  Installing Homebrew for you."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+# ENsure that brew is running and functioning correctly
+brew doctor
 
 # Update any existing homebrew recipes
 brew update
@@ -41,6 +50,10 @@ read email
 echo "The username you entered is: $email"
 git config --global user.email $email
 
+# Install and tell git to use the github recommended gitignore for macOS
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+git config --global core.excludesfile ~/.gitignore_global
+
 
 brew install git-lfs
 brew install mas  # A simple command line interface for the Mac App Store. Designed for scripting and automation.
@@ -49,8 +62,10 @@ brew install mas  # A simple command line interface for the Mac App Store. Desig
 brew install node
 brew install python
 
-
-
+# Install command-line tools
+brew install tree
+brew install fzf
+brew install ack
 brew install vim
 brew install youtube-dl  # Download YouTube videos from the command-line
 
@@ -90,6 +105,7 @@ brew cask install webpquicklook  #
 brew cask install suspicious-package  # 
 brew cask install quicklookase  # 
 brew cask install qlvideo  # 
+brew cask install quicklook-csv
 
 
 # Dev Applications
