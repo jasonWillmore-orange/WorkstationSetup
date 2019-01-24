@@ -1,0 +1,36 @@
+### MY BASH PROFILE ###
+
+
+#   -------------------------------
+#   1. ENVIRONMENT CONFIGURATION
+#   -------------------------------
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
+#   -----------------------------
+#   2. MAKE TERMINAL BETTER
+#   -----------------------------
+
+alias ls='ls -GFh'
+alias brewery='brew update && brew upgrade && brew cask upgrade  && brew cleanup'
+trash () { command mv "$@" ~/.Trash ; }    # trash:    Moves a file to the MacOS trash
+
+# TODO: add your aliases from your personal macbook here
+
+# TODO: add some good aliases from https://natelandau.com/my-mac-osx-bash_profile/
+
+
+#   lr:  Full Recursive Directory Listing
+#   ------------------------------------------
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+
+#   ---------------------------------------
+#   3. SYSTEMS OPERATIONS & INFORMATION
+#   ---------------------------------------
+
+#   finderShowHidden:   Show hidden files in Finder
+#   finderHideHidden:   Hide hidden files in Finder
+#   -------------------------------------------------------------------
+    alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
+    alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
