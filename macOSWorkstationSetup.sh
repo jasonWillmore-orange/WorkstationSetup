@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Create folderes for dev work
 mkdir -pv $HOME/Dev
@@ -112,6 +112,8 @@ brew cask install quicklook-csv
 brew cask install azure-data-studio
 brew cask install cheatsheet
 brew cask install docker
+brew cask install dotnet-sdk
+
 # brew cask install dropbox
 brew cask install firefox
 brew cask install gfxcardstatus
