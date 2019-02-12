@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # Create folderes for dev work
 mkdir -pv $HOME/Dev
