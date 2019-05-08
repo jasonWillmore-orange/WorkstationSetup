@@ -22,7 +22,7 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# ENsure that brew is running and functioning correctly
+# Ensure that brew is running and functioning correctly
 brew doctor
 
 # Update any existing homebrew recipes
@@ -122,6 +122,7 @@ brew cask install gitkraken
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install latexian
+brew cask install macmediakeyforwarder
 brew cask install postman
 brew cask install slack
 brew cask install spectacle
