@@ -120,6 +120,7 @@ brew cask install gfxcardstatus
 brew cask install github
 brew cask install gitkraken
 brew cask install google-chrome
+brew cask install firefox-developer-edition
 brew cask install iterm2
 brew cask install latexian
 brew cask install macmediakeyforwarder
