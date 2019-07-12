@@ -54,7 +54,7 @@ git config --global user.email $email
 curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
 git config --global core.excludesfile ~/.gitignore_global
 
-
+####### TERMINAL APPLICATIONS #######
 brew install git-lfs
 brew install mas  # A simple command line interface for the Mac App Store. Designed for scripting and automation.
 
@@ -69,6 +69,7 @@ brew install ack
 brew install vim
 brew install youtube-dl  # Download YouTube videos from the command-line
 
+####### GUI APPLICATIONS #######
 
 # Mac App Store Applications
 mas install 425264550 # Blackmagic Disk Speed Test (3.1)
@@ -94,7 +95,6 @@ mas install 1014850245 # Monit (1.2.1)
 # mas install 715768417 # Microsoft Remote Desktop (8.0.30030)
 mas upgrade
 
-
 # Install all the Quick Look Plugins
 brew cask install qlcolorcode  # 
 brew cask install qlstephen  #
@@ -107,13 +107,12 @@ brew cask install quicklookase  #
 brew cask install qlvideo  # 
 brew cask install quicklook-csv
 
-
 # Dev Applications
 brew cask install azure-data-studio
 brew cask install cheatsheet
+brew cask install clipy
 brew cask install docker
 brew cask install dotnet-sdk
-
 # brew cask install dropbox
 brew cask install firefox
 brew cask install gfxcardstatus
@@ -123,13 +122,15 @@ brew cask install google-chrome
 brew cask install firefox-developer-edition
 brew cask install iterm2
 brew cask install latexian
+brew cask install macdown
 brew cask install macmediakeyforwarder
+# brew cask install paste
 brew cask install postman
 brew cask install slack
 brew cask install spectacle
-# brew cask install spotify
+brew cask install spotify
 # brew cask install superduper
-# brew cask install transmission
+brew cask install transmission
 brew cask install visual-studio-code
 brew cask install vlc
 brew cask install webstorm
@@ -140,7 +141,6 @@ brew cask install appcleaner
 # brew cask install beamer # Stream directly from your Mac to Apple TV and Chromecast
 brew cask install caffeine
 brew cask install coconutbattery
-# brew cask install google-hangouts  # add the new app when hangouts dies
 brew cask install little-snitch
 brew cask install the-unarchiver
 
@@ -154,7 +154,12 @@ npm i eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y es
 # Alternatively, set up eslint without React
 # npm i eslint eslint-config-airbnb-base eslint-plugin-import
 
-# Create a default lintrc file
+# SET UP USER CONFIG FILES
+
+# Copy the vimrc config file
+cp ./vim-config ~/.vimrc
+
+# Create a default lintrc config file
 touch ~/.eslintrc
 echo >> ~/.eslintrc <<EOL
 {
