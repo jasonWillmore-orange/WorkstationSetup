@@ -1,3 +1,5 @@
+" Copy this file to '.vimrc' in your user root directory
+
 " ##### GENERAL #####
 set nocompatible                " be iMproved, required
 set noerrorbells                " Disable error bells
@@ -6,7 +8,6 @@ set nostartofline
 set ruler                       " Show the cursor position
 
 " ##### COLORS #####
-colorscheme badwolf             " awesome colorscheme
 syntax enable                   " enable syntax processing
 
 " UI CONFIG
