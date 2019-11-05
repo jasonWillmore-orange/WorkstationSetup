@@ -15,6 +15,8 @@ defaults write com.apple.screencapture location /Users/$username/screenshots/ &&
 read -p "Press any key to continue… " -n1 -s
 echo '\n'
 
+xcode-select --install
+
 # Check that Homebrew is installed and install if not
 if test ! $(which brew)
 then
@@ -68,6 +70,7 @@ brew install fzf
 brew install ack
 brew install vim
 brew install youtube-dl  # Download YouTube videos from the command-line
+brew install watchman  # A file system watcher utility, helps manage large npm applications
 
 ####### GUI APPLICATIONS #######
 
