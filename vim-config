@@ -1,3 +1,5 @@
+" Copy this file to '.vimrc' in your user root directory
+
 " ##### GENERAL #####
 set nocompatible            " Disable vi compatibility
 
@@ -16,7 +18,6 @@ set ttyfast                 " Send more characters at a given time.
 
 
 " ##### COLORS #####
-colorscheme badwolf             " awesome colorscheme
 syntax enable                   " enable syntax processing
 
 " UI CONFIG
