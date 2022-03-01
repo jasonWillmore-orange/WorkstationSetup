@@ -5,6 +5,11 @@ mkdir -pv $HOME/Dev
 mkdir -pv $HOME/Training
 mkdir -pv $HOME/Testing
 
+# Set up zsh and oh-my-zsh
+touch ~/.zshrc
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh --version
+upgrade_oh_my_zsh
 
 # Creates /Users/$username/Screenshots and changes the default folder for screenshots
 mkdir -pv $HOME/Screenshots/
@@ -60,6 +65,7 @@ brew install mas  # A simple command line interface for the Mac App Store. Desig
 
 # Install languages and frameworks
 brew install node
+brew install nvm
 brew install python
 
 # Install command-line tools
@@ -144,6 +150,17 @@ brew cask install coconutbattery
 brew cask install little-snitch
 brew cask install the-unarchiver
 
+
+# Create the useful 'brewery' alias
+cat << EOF >> ~/.bash_profile
+alias brewery="brew update && brew upgrade && brew cask update && brew cask upgrade && brew doctor && brew cleanup"
+EOF
+
+# Manually add VS Code to your path
+cat << EOF >> ~/.bash_profile
+# Add Visual Studio Code (code)
+export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+EOF
 
 # Remove brew cruft
 brew cleanup
